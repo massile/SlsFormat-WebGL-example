@@ -13,6 +13,8 @@ class Shader {
         gl.attachShader(this.id, vertShader)
         gl.attachShader(this.id, fragShader)
         gl.linkProgram(this.id)
+
+        this.uniforms = {}
     }
 
     load(source, type) {
@@ -28,6 +30,20 @@ class Shader {
 
     use() {
         gl.useProgram(this.id)
+    }
+
+    uniform1f(name, value) {
+        gl.uniform1f(this.getLocation(name), value)
+    }
+
+    uniformMat4(name, value) {
+        gl.uniformMatrix4fv(this.getLocation(name), false, value)
+    }
+
+    getLocation(name) {
+        if(!this.uniforms[name])
+            this.uniforms[name] = gl.getUniformLocation(this.id, name)
+        return this.uniforms[name]
     }
 }
 

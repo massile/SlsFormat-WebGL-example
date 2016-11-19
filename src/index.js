@@ -1,4 +1,7 @@
 import Shader from "shaders/Shader"
 
-new Shader("shader")
+const shader = new Shader("shader")
 
+shader.use()
+shader.uniform1f("test", 0.5)
+console.log(shader.uniforms)
