@@ -1,1 +1,4 @@
-document.write('lol');
+import Shader from "shaders/Shader"
+
+new Shader("shader")
+

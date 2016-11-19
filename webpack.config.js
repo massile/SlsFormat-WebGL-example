@@ -33,8 +33,8 @@ module.exports = {
 			},
 			{
 				test: /\.glsl$/,
-				include: '/resources/shaders',
-				loader: 'webpack-glsl'
+				include: __dirname + '/resources/shaders',
+				loader: 'raw-loader'
 			}
 		]
 	},

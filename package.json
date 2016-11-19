@@ -4,9 +4,9 @@
   "description": "A webgl example that loads the sls file format",
   "main": "index.js",
   "scripts": {
-		"build": "webpack -p --progress --colors",
-		"dev": "webpack-dev-server --content-base build/ --hot --inline --colors --open"
-	},
+    "build": "webpack -p --progress --colors",
+    "dev": "webpack-dev-server --content-base build/ --hot --inline --colors --open"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/massile/SlsFormat-WebGL-example.git"
@@ -18,12 +18,16 @@
   },
   "homepage": "https://github.com/massile/SlsFormat-WebGL-example#readme",
   "devDependencies": {
-		"webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.1",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-latest": "^6.16.0",
     "html-webpack-plugin": "^2.22.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1",
     "webpack-glsl-loader": "^1.0.1"
+  },
+  "dependencies": {
+    "gl-matrix": "^2.3.2"
   }
 }
