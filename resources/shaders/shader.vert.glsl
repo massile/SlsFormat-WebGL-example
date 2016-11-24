@@ -1,9 +1,8 @@
-attribute vec3 position;
+precision mediump float;
 
-uniform mat4 pr_matrix;
-uniform mat4 vw_matrix;
+attribute vec3 position;
 
 void main()
 {
-    gl_Position = pr_matrix * vw_matrix * vec4(position, 1.0);
+    gl_Position = vec4(position, 1.0);
 }

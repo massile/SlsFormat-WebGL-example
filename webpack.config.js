@@ -35,6 +35,11 @@ module.exports = {
 				test: /\.glsl$/,
 				include: __dirname + '/resources/shaders',
 				loader: 'raw-loader'
+			},
+			{
+				test: /\.json$/,
+				include: __dirname + '/resources/mesh',
+				loader: 'json-loader'
 			}
 		]
 	},

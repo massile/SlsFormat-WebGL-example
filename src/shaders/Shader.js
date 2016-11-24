@@ -1,6 +1,5 @@
 import gl from "../context"
 
-
 class Shader {
     constructor(name) {
         const vertPath = require(`../../resources/shaders/${name}.vert.glsl`)
